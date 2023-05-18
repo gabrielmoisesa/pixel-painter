@@ -1,31 +1,31 @@
 #color-palette {
-    height: 1px;
+  height: 1px;
 }
 
 .color {
-    float: left;
-    height: 70px;
-    width: 70px;
-    border: 1px solid black;
-    margin-left: 4px;
+  float: left;
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+  margin-left: 4px;
 }
 
 #one {
-    background-color: black;
+  background-color: black;
 }
 
 #two {
-    background-color: red;
+  background-color: red;
 }
 
 #three {
-    background-color: green;
+  background-color: green;
 }
 
 #four {
-    background-color: blue;
+  background-color: blue;
 }
 
 #button-random-color {
-    margin-left: 10px;
+  margin-left: 10px;
 }
