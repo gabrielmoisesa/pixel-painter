@@ -1,0 +1,26 @@
+#color-palette {
+    height: 1px;
+}
+
+.color {
+    float: left;
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+}
+
+#one {
+    background-color: red;
+}
+
+#two {
+    background-color: green;
+}
+
+#three {
+    background-color: blue;
+}
+
+#four {
+    background-color: grey;
+}
