@@ -7,6 +7,24 @@ function getRandomColor() {
   return color;
 }
 
+function loadColors() {
+  const savedColorPalette = localStorage.getItem('colorPalette');
+
+  if (savedColorPalette) {
+    const { color1, color2, color3 } = JSON.parse(savedColorPalette);
+
+    if (color1) {
+      document.getElementById('two').style.backgroundColor = color1;
+    }
+    if (color2) {
+      document.getElementById('three').style.backgroundColor = color2;
+    }
+    if (color3) {
+      document.getElementById('four').style.backgroundColor = color3;
+    }
+  }
+}
+
 function addRandomColors() {
   const button = document.getElementById('button-random-color');
   button.addEventListener('click', () => {
@@ -24,20 +42,6 @@ function addRandomColors() {
     };
     localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
   });
-const savedColorPalette = localStorage.getItem('colorPalette');
-
-if (savedColorPalette) {
-  const { color1, color2, color3 } = JSON.parse(savedColorPalette);
-
-  if (color1) {
-    document.getElementById('two').style.backgroundColor = color1;
-  }
-  if (color2) {
-    document.getElementById('three').style.backgroundColor = color2;
-  }
-  if (color3) {
-    document.getElementById('four').style.backgroundColor = color3;
-  }
- }
+  loadColors();
 }
 addRandomColors();
