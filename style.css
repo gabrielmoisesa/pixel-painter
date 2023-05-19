@@ -49,6 +49,13 @@ body {
     margin-left: 50px;
 }
 
+.button-style {
+    font-size: 21px;
+    font-family: 'VT323', monospace;
+    background-color: #1B262C;
+    color: #EEEEEE;
+}
+
 #color-palette {
   height: 70px;
   margin-bottom: 10px;
