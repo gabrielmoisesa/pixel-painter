@@ -74,3 +74,19 @@ function selectColor() {
   }
 }
 selectColor();
+
+function paintPixel() {
+  const pixels = document.getElementsByClassName('pixel');
+
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', function () {
+      const selectedColor = document.querySelector('.color.selected');
+
+      if (selectedColor) {
+        const color = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
+        this.style.backgroundColor = color;
+      }
+    });
+  }
+}
+paintPixel();
