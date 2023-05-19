@@ -85,6 +85,8 @@ function paintPixel() {
       if (selectedColor) {
         const color = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
         this.style.backgroundColor = color;
+
+        localStorage.setItem(`pixelBoard_${i}`, color);
       }
     });
   }
@@ -96,8 +98,22 @@ function clearBoard() {
 
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = '';
+
+    localStorage.removeItem(`pixelBoard_${i}`);
   }
 }
-
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clearBoard);
+
+function loadBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+
+  for (let i = 0; i < pixels.length; i += 1) {
+    const savedColor = localStorage.getItem(`pixelBoard_${i}`);
+
+    if (savedColor) {
+      pixels[i].style.backgroundColor = savedColor;
+    }
+  }
+}
+loadBoard();
