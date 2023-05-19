@@ -57,7 +57,40 @@ function createPixels(rows, columns) {
     }
   }
 }
-createPixels(5, 5);
+
+function generateBoard() {
+  const boardSizeInput = document.getElementById('board-size');
+  const pixelBoard = document.getElementById('pixel-board');
+  const inputValue = boardSizeInput.value.trim();
+  const boardSize = inputValue !== '' ? parseInt(inputValue) : 5;
+
+  if (inputValue === '') {
+    alert('Board inválido!')
+    return;
+  }
+
+  if (isNaN(boardSize) || boardSize <= 0) {
+    alert('Board inválido!');
+    return;
+  }
+
+  pixelBoard.innerHTML = '';
+  pixelBoard.style.gridTemplateColumns = `repeat(${boardSize}, 40px)`;
+  pixelBoard.style.gridTemplateRows = `repeat(${boardSize}, 40px)`;
+
+  for (let i = 0; i < boardSize; i++) {
+    for (let j = 0; j < boardSize; j++) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelBoard.appendChild(pixel);
+    }
+  }
+}
+
+generateBoard();
+
+const generateButton = document.getElementById('generate-board');
+generateButton.addEventListener('click', generateBoard);
 
 function selectColor() {
   const colorPixels = document.getElementsByClassName('color');

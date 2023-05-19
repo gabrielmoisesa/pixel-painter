@@ -92,9 +92,9 @@ body {
 }
 
 #pixel-board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
+    display: grid;
+    gap: 1px;
+    width: max-content;
     margin-top: 10px;
     margin-left: 50px;
     border: 1px solid black;
