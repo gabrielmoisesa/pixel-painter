@@ -45,3 +45,16 @@ function addRandomColors() {
   loadColors();
 }
 addRandomColors();
+
+function createPixels(rows, columns) {
+  const pixelBoard = document.getElementById('pixel-board');
+
+  for (let i = 0; i < rows; i += 1) {
+    for (let j = 0; j < columns; j += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelBoard.appendChild(pixel);
+    }
+  }
+}
+createPixels(5, 5);

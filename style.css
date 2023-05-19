@@ -1,5 +1,7 @@
 #color-palette {
-  height: 1px;
+  height: 70px;
+  clear: both;
+  margin-bottom: 10px;
 }
 
 .color {
@@ -27,5 +29,23 @@
 }
 
 #button-random-color {
-  margin-left: 10px;
+  margin-left: 4px;
+  margin-bottom: 10px;
+  width: 300px;
 }
+
+#pixel-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 325px;
+    margin-top: 10px;
+}
+
+.pixel {
+    height: 65px;
+    width: 65px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
