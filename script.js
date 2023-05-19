@@ -58,3 +58,19 @@ function createPixels(rows, columns) {
   }
 }
 createPixels(5, 5);
+
+function selectColor() {
+  const colorPixels = document.getElementsByClassName('color');
+
+  for (let i = 0; i < colorPixels.length; i += 1) {
+    colorPixels[i].addEventListener('click', function () {
+      const selectedPixel = document.querySelector('.color.selected');
+
+      if (selectedPixel) {
+        selectedPixel.classList.remove('selected');
+      }
+      this.classList.add('selected');
+    });
+  }
+}
+selectColor();
