@@ -64,15 +64,11 @@ function generateBoard() {
   const inputValue = boardSizeInput.value.trim();
   const boardSize = inputValue !== '' ? parseInt(inputValue) : 5;
 
-  if (inputValue === '') {
-    alert('Board inválido!')
+  if (inputValue === '' || inputValue < 5 || inputValue > 50) {
+    alert("Board inválido!")
     return;
   }
 
-  if (isNaN(boardSize) || boardSize <= 0) {
-    alert('Board inválido!');
-    return;
-  }
 
   pixelBoard.innerHTML = '';
   pixelBoard.style.gridTemplateColumns = `repeat(${boardSize}, 40px)`;
