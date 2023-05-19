@@ -86,7 +86,7 @@ function paintPixel() {
         const color = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
         this.style.backgroundColor = color;
 
-        localStorage.setItem(`pixelBoard_${i}`, color);
+        saveBoard();
       }
     });
   }
@@ -98,22 +98,35 @@ function clearBoard() {
 
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = '';
-
-    localStorage.removeItem(`pixelBoard_${i}`);
   }
+
+  localStorage.removeItem('pixelBoard');
 }
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clearBoard);
 
 function loadBoard() {
   const pixels = document.getElementsByClassName('pixel');
+  const savedBoard = localStorage.getItem('pixelBoard');
 
-  for (let i = 0; i < pixels.length; i += 1) {
-    const savedColor = localStorage.getItem(`pixelBoard_${i}`);
+  if (savedBoard) {
+    const pixelColors = JSON.parse(savedBoard);
 
-    if (savedColor) {
-      pixels[i].style.backgroundColor = savedColor;
+    for (let i = 0; i < pixels.length; i += 1) {
+      if (pixelColors[i]) {
+        pixels[i].style.backgroundColor = pixelColors[i];
+      }
     }
   }
 }
 loadBoard();
+
+function saveBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+  const pixelColors = [];
+
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixelColors[i] = pixels[i].style.backgroundColor;
+  }
+  localStorage.setItem('pixelBoard', JSON.stringify(pixelColors));
+}
