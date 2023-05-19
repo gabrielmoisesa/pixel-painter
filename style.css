@@ -1,6 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    font-family: 'VT323', monospace;
+    background-color: #1B262C;
+    color: #EEEEEE;
+    position: relative;
+    background-image: url('pixelart3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#navbar {
+  background-color: #1B262C;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#title1 {
+    font-size: 80px
+}
+
+#title {
+    margin-top: 65px;
+    margin-left: 50px;
+}
+
 #color-palette {
   height: 70px;
-  clear: both;
   margin-bottom: 10px;
 }
 

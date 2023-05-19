@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project Pixels Art</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1 id="title">Paleta de Cores</h1>  
-        <div id="color-palette">
-            <div class="color selected" class="" id="one"></div>
-            <div class="color" id="two"></div>
-            <div class="color" id="three"></div>
-            <div class="color" id="four"></div>
-        </div>
-        <button id="button-random-color">Cores aleatórias</button>
-        <button id="clear-board">Limpar</button>
-        <div id="pixel-board"></div>
-    </main>
-	<script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Pixels Art</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="navbar"></nav>
+  <main>
+    <h1 id="title1">Pixels Art</h1>
+    <h1 id="title">Paleta de Cores</h1>  
+    <div id="color-palette">
+      <div class="color selected" id="one"></div>
+      <div class="color" id="two"></div>
+      <div class="color" id="three"></div>
+      <div class="color" id="four"></div>
+    </div>
+    <button id="button-random-color">Cores aleatórias</button>
+    <button id="clear-board">Limpar</button>
+    <div id="pixel-board"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
 </html>
