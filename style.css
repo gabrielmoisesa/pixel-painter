@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
+    margin: 0;
     font-family: 'VT323', monospace;
     background-color: #1B262C;
     color: #EEEEEE;
@@ -20,6 +20,24 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+#heart {
+    width: 40px;
+    height: 30px;
+}
+
+#navtitle {
+    margin-left: 10px;
+    color: #BBE1FA;
+    font-size: 26px;
+}
+
+#author {
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 #title1 {
