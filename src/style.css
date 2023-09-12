@@ -1,132 +1,147 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: 'VT323', monospace;
-    background-color: #1B262C;
-    color: #EEEEEE;
-    position: relative;
-    background-image: url('./assets/pixelart3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  #navbar {
-    background-color: #1B262C;
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-  }
-  
-  #heart {
-    width: 40px;
-    height: 30px;
-  }
-  
-  .navtitle {
-    margin-left: 10px;
-    color: #BBE1FA;
-    font-size: 26px;
-    text-decoration: none;
-  }
-  
-  #author {
-    margin-left: auto;
-    margin-right: 10px;
-  }
-  
-  #title1 {
-    font-size: 80px
-  }
-  
-  #title {
-    margin-top: 65px;
-    margin-left: 35px;
-  }
-  
-  .button-style {
-    font-size: 21px;
-    font-family: 'VT323', monospace;
-    background-color: #1B262C;
-    color: #EEEEEE;
-  }
-  
-  #color-palette {
-    height: 70px;
-    margin-bottom: 10px;
-  }
-  
-  .color {
-    float: left;
-    height: 70px;
-    width: 70px;
-    border: 1px solid black;
-    margin-left: 4px;
-  }
-  
-  #one {
-    background-color: black;
-  }
-  
-  #two {
-    background-color: red;
-  }
-  
-  #three {
-    background-color: green;
-  }
-  
-  #four {
-    background-color: blue;
-  }
-  
-  #board-resizer {
-    display: flex;
-    align-items: center;
-    margin-left: -115px;
-    margin-top: -42px;
-  }
-  
-  #generate-board {
-    height: 32px;
-  }
-  
-  #board-size {
-    margin-left: 5px;
-    width: 60px;
-  }
-  
-  #button-random-color {
-    margin-left: auto;
-    margin-bottom: 10px;
-    width: 300px;
-  }
-  
-  #content {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #pixel-board {
-    display: grid;
-    width: max-content;
-    margin: 10px auto;
-    border: 4px solid black;
-    margin-left: 50px;
-    justify-content: center;
-  }
-  
-  .pixel {
-    height: 40px;
-    width: 40px;
-    border: 1px solid black;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    justify-self: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: VT323, monospace;
+  background-color: #1b262c;
+  color: #eee;
+  position: relative;
+  background-image: url('./assets/pixelart3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#navbar {
+  background-color: #1b262c;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+#heart {
+  width: 40px;
+  height: 30px;
+}
+
+
+.navtitle {
+  margin-left: 10px;
+  color: #bbe1fa;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+
+#author {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+
+#title1 {
+  font-size: 80px;
+}
+
+
+#title {
+  margin-top: 65px;
+  margin-left: 35px;
+}
+
+
+.button-style {
+  font-size: 21px;
+  font-family: VT323, monospace;
+  background-color: #1b262c;
+  color: #eee;
+}
+
+
+#color-palette {
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+
+.color {
+  float: left;
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+  margin-left: 4px;
+}
+
+
+#one {
+  background-color: black;
+}
+
+#two {
+  background-color: red;
+}
+
+#three {
+  background-color: green;
+}
+
+
+#four {
+  background-color: blue;
+}
+
+
+#board-resizer {
+  display: flex;
+  align-items: center;
+  margin-left: -115px;
+  margin-top: -42px;
+}
+
+#generate-board {
+  height: 32px;
+}
+
+
+#board-size {
+  margin-left: 5px;
+  width: 60px;
+}
+
+
+#button-random-color {
+  margin-left: auto;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+
+#content {
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#pixel-board {
+  display: grid;
+  width: max-content;
+  margin: 10px auto;
+  border: 4px solid black;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  justify-self: center;
+}
