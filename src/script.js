@@ -10,15 +10,10 @@ function getRandomColor() {
 function loadColors() {
   const savedColorPalette = localStorage.getItem('colorPalette');
 
-  const { color1, color2, color3 } = JSON.parse(savedColorPalette);
-
-  if (color1) {
+  if (savedColorPalette) {
+    const { color1, color2, color3 } = JSON.parse(savedColorPalette);
     document.getElementById('two').style.backgroundColor = color1;
-  }
-  if (color2) {
     document.getElementById('three').style.backgroundColor = color2;
-  }
-  if (color3) {
     document.getElementById('four').style.backgroundColor = color3;
   }
 }
@@ -66,7 +61,7 @@ generateBoard(inputValue);
 function changeBoardSize() {
   const newBoardSize = Number(boardSizeInput.value);
 
-  if (newBoardSize === '' || newBoardSize < 5 || newBoardSize > 50) {
+  if (newBoardSize === '' || newBoardSize < 5 || newBoardSize > 12) {
     alert('Board inválido!');
   } else {
     generateBoard(newBoardSize);
