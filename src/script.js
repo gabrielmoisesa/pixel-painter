@@ -105,22 +105,21 @@ function saveBoard() {
 }
 
 function paintPixel() {
-  const pixels = document.getElementsByClassName('pixel');
-
-  function clickHandler() {
+  function clickHandler(event) {
     const selectedColor = document.querySelector('.color.selected');
 
     if (selectedColor) {
       const color = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
-      this.style.backgroundColor = color;
-
-      saveBoard();
+      const pixelClassList = event.target.classList;
+      const pixelTarget = event.target;
+      if (pixelClassList.contains('pixel')) {
+        pixelTarget.style.backgroundColor = color;
+        saveBoard();
+      }
     }
   }
 
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', clickHandler);
-  }
+  pixelBoard.addEventListener('click', clickHandler);
 }
 paintPixel();
 
