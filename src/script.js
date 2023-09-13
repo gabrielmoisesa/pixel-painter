@@ -104,22 +104,47 @@ function saveBoard() {
   localStorage.setItem('pixelBoard', JSON.stringify(pixelColors));
 }
 
-function paintPixel() {
-  function clickHandler(event) {
-    const selectedColor = document.querySelector('.color.selected');
+// Paint Pixel Logic
+let isPainting = false;
 
-    if (selectedColor) {
-      const color = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
-      const pixelClassList = event.target.classList;
-      const pixelTarget = event.target;
-      if (pixelClassList.contains('pixel')) {
-        pixelTarget.style.backgroundColor = color;
-        saveBoard();
-      }
+function stopPainting() {
+  isPainting = false;
+}
+
+function getSelectedColor() {
+  const selectedColor = document.querySelector('.color.selected');
+  return selectedColor
+    ? window
+      .getComputedStyle(selectedColor)
+      .getPropertyValue('background-color')
+    : '';
+}
+
+function isPixelElement(element) {
+  return element.classList.contains('pixel');
+}
+
+function paint(event) {
+  if (isPainting) {
+    const color = getSelectedColor();
+    const pixelTarget = event.target;
+
+    if (isPixelElement(pixelTarget)) {
+      pixelTarget.style.backgroundColor = color;
+      saveBoard();
     }
   }
+}
 
-  pixelBoard.addEventListener('click', clickHandler);
+function paintPixel() {
+  function startPainting(event) {
+    isPainting = true;
+    paint(event);
+  }
+
+  pixelBoard.addEventListener('mousedown', startPainting);
+  pixelBoard.addEventListener('mouseup', stopPainting);
+  pixelBoard.addEventListener('mousemove', paint);
 }
 paintPixel();
 

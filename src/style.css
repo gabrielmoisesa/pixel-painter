@@ -40,6 +40,10 @@ body {
   font-weight: 400;
 }
 
+a {
+  color: #bbe1fa;
+}
+
 main {
   display: flex;
   text-align: center;
