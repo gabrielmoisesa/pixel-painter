@@ -97,8 +97,12 @@ input {
 }
 
 
-#one {
+#black {
   background-color: black;
+}
+
+#white {
+  background-color: white;
 }
 
 #two {
