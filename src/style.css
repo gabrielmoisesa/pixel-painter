@@ -65,6 +65,16 @@ main {
   font-family: VT323, monospace;
   background-color: #1b262c;
   color: #eee;
+  cursor: pointer;
+}
+
+input {
+  font-size: 21px;
+  font-family: VT323, monospace;
+  background-color: #eee;
+  cursor: pointer;
+  padding: 0.1rem;
+  margin-left: 0.5rem;
 }
 
 
