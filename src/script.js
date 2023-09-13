@@ -41,12 +41,17 @@ addRandomColors();
 
 const boardSizeInput = document.getElementById('board-size');
 const pixelBoard = document.getElementById('pixel-board');
-const inputValue = Number(boardSizeInput.value);
+
+const isMobile = window.innerWidth <= 768;
+const inputValue = isMobile ? 8 : 9;
+boardSizeInput.value = inputValue;
 
 function generateBoard(boardSize) {
   pixelBoard.innerHTML = '';
-  pixelBoard.style.gridTemplateColumns = `repeat(${boardSize}, 40px)`;
-  pixelBoard.style.gridTemplateRows = `repeat(${boardSize}, 40px)`;
+  const pixelSize = 40;
+
+  pixelBoard.style.gridTemplateColumns = `repeat(${boardSize}, ${pixelSize}px)`;
+  pixelBoard.style.gridTemplateRows = `repeat(${boardSize}, ${pixelSize}px)`;
 
   for (let i = 0; i < boardSize; i += 1) {
     for (let j = 0; j < boardSize; j += 1) {
