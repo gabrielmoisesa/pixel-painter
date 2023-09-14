@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pixel Painter</title>
   <link rel="stylesheet" href="./src/style.css">
-  <link rel="icon" href="./src/assets/pixelart3.jpg" type="image/x-icon">
+  <link rel="icon" href="./src/assets/art-7423289_1920.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
   <main>
     <div id="content">
       <h1 id="title1">Pixels Art</h1>
-      <h2 id="title">Paleta de Cores 🎨</h2>  
+      <h2 id="title">Color Palette <img src="./src/assets/art-7423289_1920.png" alt="Pixelated Paint Brush" class="paintbrush-icon"></h2>  
       <div id="color-palette">
         <div class="color selected" id="black"></div>
         <div class="color" id="white"></div>
@@ -28,13 +28,13 @@
         <div class="color" id="four"></div>
       </div>
     </div>
-      <button id="button-random-color" class="button-style">Cores aleatórias</button>
+      <button id="button-random-color" class="button-style">Random colors</button>
       <div class="secondary-buttons">
         <div id="board-resizer">
-          <button id="generate-board" class="button-style">Tamanho</button>
+          <button id="generate-board" class="button-style">Size</button>
           <input type="number" id="board-size" min="1" max="50">
         </div>
-        <button id="clear-board" class="button-style">Limpar</button>
+        <button id="clear-board" class="button-style">Clear</button>
       </div>
   <div class="board-container">
     <div id="pixel-board"></div>
