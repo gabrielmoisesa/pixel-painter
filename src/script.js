@@ -67,7 +67,7 @@ function changeBoardSize() {
   const newBoardSize = Number(boardSizeInput.value);
 
   if (newBoardSize === '' || newBoardSize < 5 || newBoardSize > 12) {
-    alert('Board inválido!');
+    alert('Invalid board! Choose a size from 5 to 12');
   } else {
     generateBoard(newBoardSize);
   }
