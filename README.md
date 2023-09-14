@@ -1,6 +1,6 @@
 # Pixel Painter <img src="./src/assets/art-7423289_1920.png" width="50" align="center">
 
-A pixel art drawning app, made with <img src="./src/assets/heart-removebg-preview.png" width="30" align="center">
+A pixel art drawing app, made with <img src="./src/assets/heart-removebg-preview.png" width="30" align="center">
 
 > See the full live preview [here](https://gabrielmoisesa.github.io/pixel-painter/)
 
@@ -12,7 +12,7 @@ A pixel art drawning app, made with <img src="./src/assets/heart-removebg-previe
 
 ## About the project
 
-One of my very first projects, Pixel Painter is a pixel art drawning app made with pure JavaScript.
+One of my very first projects, Pixel Painter is a pixel art drawing app made with pure JavaScript.
 
 - Draw pixels with a randomly generated color palette that you can change whenever you want!
 - Resize the pixel board from 5 to 12.
